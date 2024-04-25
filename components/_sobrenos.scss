@@ -1,0 +1,76 @@
+@use "../abstract/variaveis";
+
+.conteudo-secundario{
+    
+    background-color: variaveis.$cor-primaria;
+    padding-top: 10%;
+    color: white;
+    .conteudo-secundario-titulo{
+        margin-left: 10%;
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        
+        h1{
+            font-size: 2em;
+            font-weight: 200;
+            white-space: nowrap;
+            span{
+                color:variaveis.$cor-secundaria;
+            }
+        }
+        div{
+            background-color: variaveis.$cor-secundaria;
+            height: 5px;
+            width: 100%;
+        }
+    }
+    .informacoes-secundarias{
+        margin-left: 15%;
+        margin-top: 5%;
+        display: flex;
+        gap: 2em;
+        
+
+        .sobre{
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            width: 30%;
+            margin-top: 10%;
+            h2{
+                font-size: 1.50em;
+                font-weight: 300;
+            }
+            
+        }
+
+        .nossa-especialidade{
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            margin-top: 10%;
+            h2{
+                font-size: 1.50em;
+                font-weight: 300;
+            }
+            p{
+                text-transform: uppercase;
+                font-weight: 200
+            }
+            img{
+                
+                width: 2em;
+            }
+
+        }
+
+        img{
+            width: 30%;
+        }
+
+    }
+
+    
+
+}

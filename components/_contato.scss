@@ -1,0 +1,95 @@
+@use "../abstract/variaveis";
+
+.contato{
+    background-color: variaveis.$cor-primaria;
+    padding-top: 10%;
+    color: white;
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+    
+    
+    .contatos-titulos{
+        margin-left: 10%;
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        h1{
+            text-transform: uppercase;
+            font-size: 2em;
+            font-weight: 200;
+            white-space: nowrap;
+            span{
+                color:variaveis.$cor-secundaria;
+            }
+        }
+        div{
+            background-color: variaveis.$cor-secundaria;
+            height: 5px;
+            width: 100%;
+        }
+
+    }
+
+    .mapa{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 3em;
+        gap: 1em;
+        img{
+            width: 3em;
+        }
+    }
+
+    .cards-sociais{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2em;
+        .card-redes-sociais{
+            padding: 1em;
+            border-radius: 30px;
+            a{
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                color: white;
+                justify-content: center;
+                gap: 1em;
+                img{
+                    width: 2em;
+                }
+                p{
+                    font-size: 1.20em;
+                    text-transform: uppercase;
+                   
+                }
+
+            }
+            background-color: variaveis.$cor-secundaria;
+            width: 20%;
+            
+    
+        }
+
+    }
+    
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6em;
+    padding-bottom: 3em;
+    background-color: variaveis.$cor-primaria;
+    p{
+        color: white;
+        font-weight: 100;
+    }
+}

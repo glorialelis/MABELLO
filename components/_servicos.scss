@@ -1,0 +1,73 @@
+@use "../abstract/variaveis";
+
+.nossos-servicos{
+    background-color: variaveis.$cor-primaria;
+    padding-top: 10%;
+    color: white;
+    .nossos-servicos-titulos{
+        margin-left: 10%;
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        h1{
+            text-transform: uppercase;
+            font-size: 2em;
+            font-weight: 200;
+            white-space: nowrap;
+            span{
+                color:variaveis.$cor-secundaria;
+            }
+        }
+        div{
+            background-color: variaveis.$cor-secundaria;
+            height: 5px;
+            width: 100%;
+        }
+    }
+
+
+    .nossos-servicos-cards{
+        margin-top: 5%;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        .card-item{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2em;
+            gap: 2em;
+            background-color: variaveis.$cor-terciaria;
+            width: 50%;
+            height: 30%;
+            border-radius: 30px;
+            .conteudo-item{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                h2{
+                    font-size: 1.20em;
+                    font-weight: 300;
+                }
+                p{
+                    font-weight: 100;
+                }
+                
+            }
+            
+            img{
+                width: 50%;
+                
+            } 
+        }
+
+        .reverse{
+            flex-direction: row-reverse;
+        }
+    }
+}
