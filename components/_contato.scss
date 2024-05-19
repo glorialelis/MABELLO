@@ -1,0 +1,138 @@
+@use "../abstract/variaveis";
+
+.contato{
+    background-color: variaveis.$cor-primaria;
+    padding-top: 10%;
+    color: white;
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+    
+    
+    .contatos-titulos{
+        margin-left: 10%;
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        h1{
+            text-transform: uppercase;
+            font-size: 2em;
+            font-weight: 200;
+            white-space: nowrap;
+            span{
+                color:variaveis.$cor-secundaria;
+            }
+        }
+        div{
+            background-color: variaveis.$cor-secundaria;
+            height: 5px;
+            width: 100%;
+        }
+
+    }
+
+    .mapa{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 3em;
+        gap: 1em;
+        img{
+            width: 3em;
+        }
+    }
+
+    .cards-sociais{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2em;
+        flex-direction: column-reverse;
+        .card-redes-sociais{
+            padding: 1rem;
+            border-radius: 30px;
+            &:hover{
+                background: #9A6527;
+                transition: 0.3s;
+                transform: translateY(-5px);
+            }
+            
+            a{
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                color: white;
+                justify-content: center;
+                gap: 1rem;
+                
+                img{
+                    width: 2em;
+                }
+                p{
+                    font-size: 1.20em;
+                    text-transform: uppercase;
+                   
+                }
+
+            }
+            background-color: variaveis.$cor-secundaria;
+            width: 20%;
+            
+    
+        }
+
+    }
+    
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6em;
+    padding-bottom: 3em;
+    background-color: variaveis.$cor-primaria;
+    flex-direction: column;
+    gap: 5rem;
+    ul{
+        display:flex;
+        gap: 2rem;
+        div{
+            width: 2px;
+            height: 1rem;
+            background-color: white;
+        }
+        .e-mail{
+            text-decoration: none;
+                color: white;
+                &:hover{
+                    transition: .3s;
+                    color: variaveis.$cor-secundaria;
+
+                }
+
+        }
+        li{
+            
+            a{
+                text-decoration: none;
+                color: white;
+                &:hover{
+                    transition: .3s;
+                    color: variaveis.$cor-secundaria;
+
+                }
+            }
+
+        }
+    }
+
+    p{
+        color: white;
+        font-weight: 100;
+    }
+}

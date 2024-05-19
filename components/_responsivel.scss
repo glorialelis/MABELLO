@@ -1,0 +1,276 @@
+@use "../abstract/variaveis";
+
+@media screen and (max-width: 500px){
+    .conteudo-principal{
+        header{
+            justify-content: space-between;
+            padding: 0 1rem;
+            margin: 0;
+            #btn-mobile{
+                display: block;
+            }
+            img{
+                width: 40%;
+            }
+            #nav{
+                #menu{
+                    display: flex;
+                    padding-top: 3rem;
+                    position: absolute;
+                    width: 100%;
+                    top: 40px;
+                    right: 0; 
+                    background-color: rgb(17, 16, 21,95%);
+                    height: 0;
+                    transition: .6s;
+                    z-index: 1000;
+                    flex-direction: column;
+                    overflow-y: hidden;
+                    visibility: hidden;
+                    gap: 4rem;
+
+                    li{
+                        width:100vh;
+                        
+                        a{
+                            width:100vh;
+                            
+                            margin: 0 3rem;
+                            
+                        }
+
+                    } 
+
+                    
+                    
+                }
+                
+
+            }
+            
+            
+            #nav.active #menu{
+                height: calc(100vh - 40px);
+                visibility: visible;
+                overflow-y: auto;
+            }
+
+            #btn-mobile{
+                display: flex;
+                padding: .5rem 1rem;
+                font-size: 1rem;
+                border: none;
+                background: none;
+                cursor: pointer;
+                gap: .5rem;
+                color:#9A815F;
+
+                #hamburger{
+                    border-top: 2px solid;
+                    width: 20px;
+                    display: block;
+
+                    &::after, 
+                    &::before {
+                        content: '';
+                        display: block;
+                        width: 20px;
+                        height: 2px;
+                        background: currentColor;
+                        margin-top: 5px;
+                        transition: .3s;
+                        position: relative;
+                    }
+                    
+                }
+              
+                
+            }
+
+
+            #nav.active #hamburger {
+                border-top-color: transparent;
+
+                &::before{
+                    transform: rotate(135deg);
+                }
+                &::after{
+                    transform: rotate(-135deg);
+                    top: -7px;
+
+                }
+            }
+
+            
+
+        }
+
+
+        .color{
+            top: 0;
+            
+            .conteudo{
+                margin-left: 24%;
+                width: 100%;
+                h1{
+                    font-size: 1.30rem;
+                }
+                .botao-principal{
+                    width: 70%;
+                    font-size: 1rem;
+                    padding: .70rem;
+                }
+            }
+            
+        }
+
+        .redes-sociais{
+            background-image: radial-gradient(rgba(26, 24, 27, 0.786),rgba(26, 24, 27, 0.478), transparent, transparent);
+            padding: 3rem;
+            right: -1.50rem;
+            bottom: 0;
+        }
+
+    }
+
+    .conteudo-secundario{
+        padding-top: 25%;
+        .conteudo-secundario-titulo{
+            margin-left: 5%;
+            h1{
+                font-size: 1.30rem;
+                margin-left: 0;
+            }
+            div{
+                display: none;
+            }
+        }
+        .informacoes-secundarias{
+            flex-direction: column;
+            align-items: center;
+            margin-left: 5%;
+            .sobre{
+                margin-left:-2rem;
+                width: 90%;
+                h2{
+                   font-size:1.20rem ; 
+                }
+                p{
+                    font-weight: 100;
+                }
+            }
+            .nossa-especialidade{
+                margin-left:0;
+                gap: 1rem;
+                h2{
+                    
+                    font-size:1.20rem ; 
+                 }
+                 
+                 p{
+                    font-weight: 100;
+                    font-size: .90rem;
+                }
+                img{
+                    margin-top: 2rem;
+                }
+
+            }
+
+            img{
+                width: 120%;
+            }
+
+        }
+
+    }
+
+
+    .nossos-servicos{
+        .nossos-servicos-titulos{
+            h1{
+                font-size:1.20rem
+            }
+        }
+        .nossos-servicos-cards{
+            flex-direction: row;
+            overflow-x: auto;
+            padding: 2rem;
+            justify-content: left;
+            gap: 1rem;
+            .card-item{
+                padding: 1rem;
+                border-radius: 10px;
+                flex-direction: column-reverse;
+                justify-content: space-around;
+                gap: 1rem;
+                min-width: 14rem;
+                min-height: 20rem;
+                padding: 1rem;
+                img{
+                    width: 13rem;
+                }
+                .conteudo-item{
+                    width: 100%;
+                    min-height: 10rem;
+                    
+                    h2{
+                        font-size: 1rem;
+                    }
+                    p{
+                        font-size: .80rem
+
+                    }
+                }
+            }
+        }
+    }
+
+    .contato{
+        .contatos-titulos{
+            margin-left: 10%;
+            display: flex;
+            align-items: center;
+            gap: 1em;
+            h1{
+                text-transform: uppercase;
+                font-size: 1.20em;
+                color: white;
+                font-weight: 200;
+                white-space: nowrap;
+                span{
+                    color:variaveis.$cor-secundaria;
+                }
+            }
+        }
+        .cards-sociais{
+            .card-redes-sociais{
+                width: 50%;
+                a{
+                    
+                    p{
+                        font-size: 1rem;
+
+                    }
+                }
+            }
+        }
+    }
+
+
+    footer{
+        ul{
+            padding: 1rem;
+            flex-direction: column;
+            li{
+                a{
+                    font-size: 1rem;
+                }
+            }
+            div{
+                display: none;
+            }
+        }
+    }
+
+}
