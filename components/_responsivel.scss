@@ -1,7 +1,9 @@
 @use "../abstract/variaveis";
 
 @media screen and (max-width: 500px){
+    
     .conteudo-principal{
+        height: 750px;
         header{
             justify-content: space-between;
             padding: 0 1rem;
@@ -133,6 +135,20 @@
 
     }
 
+    .container-servicos{
+        .slider-wrapper{
+            .tittle-servico{
+                h1{
+                    font-size: 1.20rem;
+
+                }
+           
+            }
+
+        }
+    }
+
+    
     .conteudo-secundario{
         padding-top: 25%;
         .conteudo-secundario-titulo{
@@ -174,12 +190,14 @@
                 img{
                     margin-top: 2rem;
                 }
+               
 
             }
-
-            img{
-                width: 120%;
+            .casa-luxuosa{
+                width: 100%;
             }
+
+            
 
         }
 
@@ -195,6 +213,7 @@
         .nossos-servicos-cards{
             flex-direction: row;
             overflow-x: auto;
+            width: 100%;
             padding: 2rem;
             justify-content: left;
             gap: 1rem;

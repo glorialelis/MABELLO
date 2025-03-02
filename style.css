@@ -1,21 +1,6 @@
 @charset "UTF-8";
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+/*--------------------------VARIÁVEIS-----------------------------------*/
+* {
   margin: 0;
   padding: 0;
   border: 0;
@@ -23,29 +8,11 @@ time, mark, audio, video {
   font-family: "Montserrat", sans-serif;
   vertical-align: baseline;
 }
-html body, body body, div body, span body, applet body, object body, iframe body,
-h1 body, h2 body, h3 body, h4 body, h5 body, h6 body, p body, blockquote body, pre body,
-a body, abbr body, acronym body, address body, big body, cite body, code body,
-del body, dfn body, em body, img body, ins body, kbd body, q body, s body, samp body,
-small body, strike body, strong body, sub body, sup body, tt body, var body,
-b body, u body, i body, center body,
-dl body, dt body, dd body, ol body, ul body, li body,
-fieldset body, form body, label body, legend body,
-table body, caption body, tbody body, tfoot body, thead body, tr body, th body, td body,
-article body, aside body, canvas body, details body, embed body,
-figure body, figcaption body, footer body, header body, hgroup body,
-menu body, nav body, output body, ruby body, section body, summary body,
-time body, mark body, audio body, video body {
+
+body, html {
+  width: 100%;
+  overflow-x: hidden;
   background-color: #111015;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-body {
   line-height: 1;
 }
 
@@ -53,22 +20,28 @@ ol, ul {
   list-style: none;
 }
 
-blockquote, q {
-  quotes: none;
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #9A815F;
+  border-radius: 10px;
 }
 
-/*--------------------------VARIÁVEIS-----------------------------------*/
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #9b6528;
+}
+
 .conteudo-principal {
   background-image: url("img/bg-main.png");
   background-size: cover;
@@ -237,74 +210,50 @@ table {
 .conteudo-secundario .informacoes-secundarias .nossa-especialidade img {
   width: 2em;
 }
-.conteudo-secundario .informacoes-secundarias img {
+.conteudo-secundario .informacoes-secundarias .casa-luxuosa {
   width: 30%;
 }
 
-.nossos-servicos {
-  background-color: #111015;
-  padding-top: 10%;
-  color: white;
-}
-.nossos-servicos .nossos-servicos-titulos {
-  margin-left: 10%;
+.tittle-servico {
+  padding: 5em 0 3em 0em;
   display: flex;
   align-items: center;
+  justify-content: center;
+  color: white;
   gap: 1em;
 }
-.nossos-servicos .nossos-servicos-titulos h1 {
-  text-transform: uppercase;
+.tittle-servico h1 {
   font-size: 2em;
   font-weight: 200;
   white-space: nowrap;
 }
-.nossos-servicos .nossos-servicos-titulos h1 span {
+.tittle-servico h1 span {
   color: #9A815F;
 }
-.nossos-servicos .nossos-servicos-titulos div {
+.tittle-servico div {
   background-color: #9A815F;
   height: 5px;
   width: 100%;
 }
-.nossos-servicos .nossos-servicos-cards {
-  margin-top: 5%;
-  height: 100%;
+
+.container-servicos .slider-wrapper {
+  overflow: hidden;
+  max-width: 1200vh;
+  margin: 0 70px 55px;
+}
+.container-servicos .slider-wrapper .swiper-button-prev, .container-servicos .slider-wrapper .swiper-button-next {
+  color: #9b6528;
+}
+.container-servicos .slider-wrapper .card-list {
+  width: 150px;
+}
+.container-servicos .slider-wrapper .card-list .servico-img {
   width: 100%;
+  border-radius: 10px;
+  padding: 0;
+  display: flex;
   align-items: center;
   justify-content: center;
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-}
-.nossos-servicos .nossos-servicos-cards .card-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2em;
-  gap: 2em;
-  background-color: #212024;
-  width: 50%;
-  height: 30%;
-  border-radius: 30px;
-}
-.nossos-servicos .nossos-servicos-cards .card-item .conteudo-item {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-.nossos-servicos .nossos-servicos-cards .card-item .conteudo-item h2 {
-  font-size: 1.2em;
-  font-weight: 300;
-}
-.nossos-servicos .nossos-servicos-cards .card-item .conteudo-item p {
-  font-weight: 100;
-}
-.nossos-servicos .nossos-servicos-cards .card-item img {
-  width: 50%;
-}
-.nossos-servicos .nossos-servicos-cards .reverse {
-  flex-direction: row-reverse;
 }
 
 .contato {
@@ -424,6 +373,9 @@ footer p {
 }
 
 @media screen and (max-width: 500px) {
+  .conteudo-principal {
+    height: 750px;
+  }
   .conteudo-principal header {
     justify-content: space-between;
     padding: 0 1rem;
@@ -519,6 +471,9 @@ footer p {
     right: -1.5rem;
     bottom: 0;
   }
+  .container-servicos .slider-wrapper .tittle-servico h1 {
+    font-size: 1.2rem;
+  }
   .conteudo-secundario {
     padding-top: 25%;
   }
@@ -561,8 +516,8 @@ footer p {
   .conteudo-secundario .informacoes-secundarias .nossa-especialidade img {
     margin-top: 2rem;
   }
-  .conteudo-secundario .informacoes-secundarias img {
-    width: 120%;
+  .conteudo-secundario .informacoes-secundarias .casa-luxuosa {
+    width: 100%;
   }
   .nossos-servicos .nossos-servicos-titulos h1 {
     font-size: 1.2rem;
@@ -570,6 +525,7 @@ footer p {
   .nossos-servicos .nossos-servicos-cards {
     flex-direction: row;
     overflow-x: auto;
+    width: 100%;
     padding: 2rem;
     justify-content: left;
     gap: 1rem;

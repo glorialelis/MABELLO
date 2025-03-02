@@ -1,76 +1,82 @@
 @use "../abstract/variaveis";
 
-.conteudo-secundario{
+    .conteudo-secundario{
     
-    background-color: variaveis.$cor-primaria;
-    padding-top: 10%;
-    color: white;
-    .conteudo-secundario-titulo{
-        margin-left: 10%;
-        display: flex;
-        align-items: center;
-        gap: 1em;
-        
-        h1{
-            font-size: 2em;
-            font-weight: 200;
-            white-space: nowrap;
-            span{
-                color:variaveis.$cor-secundaria;
-            }
-        }
-        div{
-            background-color: variaveis.$cor-secundaria;
-            height: 5px;
-            width: 100%;
-        }
-    }
-    .informacoes-secundarias{
-        margin-left: 15%;
-        margin-top: 5%;
-        display: flex;
-        gap: 2em;
-        
-
-        .sobre{
+        background-color: variaveis.$cor-primaria;
+        padding-top: 10%;
+        color: white;
+        .conteudo-secundario-titulo{
+            margin-left: 10%;
             display: flex;
-            flex-direction: column;
+            align-items: center;
             gap: 1em;
-            width: 30%;
-            margin-top: 10%;
-            h2{
-                font-size: 1.50em;
-                font-weight: 300;
-            }
             
+            h1{
+                font-size: 2em;
+                font-weight: 200;
+                white-space: nowrap;
+                span{
+                    color:variaveis.$cor-secundaria;
+                }
+            }
+            div{
+                background-color: variaveis.$cor-secundaria;
+                height: 5px;
+                width: 100%;
+            }
         }
-
-        .nossa-especialidade{
+        .informacoes-secundarias{
+            margin-left: 15%;
+            margin-top: 5%;
             display: flex;
-            flex-direction: column;
-            gap: 1em;
-            margin-top: 10%;
-            h2{
-                font-size: 1.50em;
-                font-weight: 300;
-            }
-            p{
-                text-transform: uppercase;
-                font-weight: 200
-            }
-            img{
+            gap: 2em;
+            
+    
+            .sobre{
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                width: 30%;
+                margin-top: 10%;
+                h2{
+                    font-size: 1.50em;
+                    font-weight: 300;
+                }
                 
-                width: 2em;
             }
+    
+            .nossa-especialidade{
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                margin-top: 10%;
+                h2{
+                    font-size: 1.50em;
+                    font-weight: 300;
+                }
+                p{
+                    text-transform: uppercase;
+                    font-weight: 200
+                }
+                img{
+                    
+                    width: 2em;
+                }
 
+                
+    
+            }
+            .casa-luxuosa{
+                    
+                width: 30%;
+                
+            }
+    
+            
+    
         }
-
-        img{
-            width: 30%;
-        }
-
+    
+        
+    
     }
 
-    
-
-}
